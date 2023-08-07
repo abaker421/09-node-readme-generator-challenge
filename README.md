@@ -1,8 +1,8 @@
-# Test 
+# README Generator Powered by Node.js 
 
 ## Project description
 
-Test
+Create a program to run in Node.js that takes user inputs and creates a README.md file
 
 ## Table of Contents
 
@@ -17,43 +17,45 @@ Test
 
 ## Installation
 
-Test
+Install Node.js prior to runnig the program
 
 ## Usage
 
-Test
+-Open the program folder in a termial<br>
+-Type node index<br>
+-Answer the prompts<br>
+-The README is generated in the program folder
 
-Deployed Page:
 
-Test
+Repository: 
 
-Repository:
-
-Test
+https://github.com/bakeradm6/09-node-readme-generator-challenge/blob/main/README.md
 
 ## Features
 
-Test'
+-Adds in image and text based off which license is chosen<br>
+-Includes clickable Table of Contents<br>
+-Includes placeholder image for screenshot
 
 ## Documentation
 
-Test
+N/A
 
 Screenshot:
 
-![placeholder](https://github.com/bakeradm6/09-node-readme-generator-challenge/assets/123577761/7340e073-8263-45b3-99da-613d6f95d561)
+![image](https://github.com/bakeradm6/09-node-readme-generator-challenge/assets/123577761/b718142a-d568-4150-9538-9c8bd60661b6)
 
 ## Contributing
 
-Test
+This is a homework assignments, so no pull requests will be accepted except those by universty and approved staff
 
 ## Tests
 
-Test
+N/A
 
 ## Questions
 
-Test
+N/A
 
 ## License
 
