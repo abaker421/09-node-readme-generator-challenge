@@ -10,7 +10,7 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(data) {
   if (data.userLicense === 'MIT'){
-    license= `MIT License
+    return `MIT License
     
     Copyright (c) ${data.userYear} ${data.username}
 
@@ -34,7 +34,7 @@ SOFTWARE.
     `
 
   } else if(data.userLicense==='BSD'){
-  `BSD License
+  return `BSD License
     
     Copyright (c) ${data.userYear} ${data.username}
     
@@ -51,7 +51,7 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
 
   } else if (data.userLicense === 'GPL'){
-   `GPL License
+   return `GPL License
     
     Copyright (c) ${data.userYear} ${data.username}
     
@@ -77,12 +77,12 @@ Some devices are designed to deny users access to install or run modified versio
 Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.`
 
   } else {
-    console.log(`No license has been selected, manually add later`)
+    return `No License Selected`
   }
 }
 
 // TODO: Create a function to generate markdown for README
-export function generateMarkdown(data, license) {
+export function generateMarkdown(data) {
   return `# ${data.title}
   # 
 

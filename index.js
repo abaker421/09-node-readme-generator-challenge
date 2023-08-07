@@ -7,8 +7,9 @@ const fileName= 'README.md'
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err)=>{
-    if (err){
+
+  fs.writeFile(fileName, data, (err) => {
+    if (err) {
       console.log(err)
     } else {
       console.log('Generated successfully!')
@@ -62,8 +63,8 @@ function init() {
     },
     {
       type:'input' ,
-      message:'What is the ![image] for the screenshot?',
-      name: 'userDocumentation',
+      message:'What is the image link for the screenshot?',
+      name: 'userScreenshotLink',
       default: '![placeholder](https://github.com/bakeradm6/09-node-readme-generator-challenge/assets/123577761/7340e073-8263-45b3-99da-613d6f95d561)',
     },
     {
@@ -77,11 +78,10 @@ function init() {
       name: 'userQuestions', 
     },
     {
-     type: 'choices',
+     type: 'list',
      message: 'What kind of license do you want to use?',
      name: 'userLicense',
      choices:['MIT', 'BSD', 'GPL', 'None'],
-     default: 'MIT',
     }
 
 ])
