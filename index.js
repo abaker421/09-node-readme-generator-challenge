@@ -23,7 +23,7 @@ function init() {
   .prompt([
     {
       type: 'input',
-      message: 'What is your name?',
+      message: 'What is your first and last name?',
       name: 'username',
     },
     {
@@ -33,7 +33,7 @@ function init() {
     },
     {
         type: 'input',
-        message: 'What is the title of the project?',
+        message: 'What is the Title of the project?',
         name: 'title'
     },
     {
@@ -43,7 +43,7 @@ function init() {
     },
     {
       type: 'input',
-      message: 'What are the installation instructions?',
+      message: 'What are the Installation instructions?',
       name: 'userInstallation'
     },
     {
