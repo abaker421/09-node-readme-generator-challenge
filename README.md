@@ -17,7 +17,7 @@ Create a program to run in Node.js that takes user inputs and creates a README.m
 
 ## Installation
 
-Install Node.js prior to runnig the program
+Install Node.js prior to running the program
 Run npm init upon first download to install inquirer
 
 ## Usage
@@ -47,6 +47,10 @@ Screenshot:
 ![image](https://github.com/bakeradm6/09-node-readme-generator-challenge/assets/123577761/b718142a-d568-4150-9538-9c8bd60661b6)
 
 ## Contributing
+
+Thanks to opensource.org for providing licence templates and information
+
+Thanks to shields.io for providing the license images
 
 This is a homework assignments, so no pull requests will be accepted except those by universty and approved staff
 

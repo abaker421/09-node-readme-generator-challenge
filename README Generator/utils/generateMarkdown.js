@@ -20,7 +20,7 @@ function renderLicenseLink(license) {
   } else if (license === 'BSD') {
     return 'https://opensource.org/licenses/BSD-3-Clause'
   } else if (license === 'GPL') {
-    return 'https://www.gnu.org/licenses/gpl-3.0.en.html'
+    return 'https://opensource.org/license/gpl-2-0/'
   } else {
     return ''
   }
