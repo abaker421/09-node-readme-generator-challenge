@@ -18,6 +18,7 @@ Create a program to run in Node.js that takes user inputs and creates a README.m
 ## Installation
 
 Install Node.js prior to runnig the program
+Run npm init upon first download to install inquirer
 
 ## Usage
 
