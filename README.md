@@ -57,9 +57,8 @@ Screenshot:
 
 ## License
 
-MIT License
-    
-    Copyright (c) NaN 
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg) 
+     Copyright (c) NaN 
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -79,3 +78,5 @@ MIT License
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
     
+
+For more information on this licence type visit https://opensource.org/licenses/MIT

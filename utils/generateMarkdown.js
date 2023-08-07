@@ -8,21 +8,31 @@ function renderLicenseBadge(license) {
   } else if (license === 'GPL') {
     return '![GPL License](https://img.shields.io/badge/License-GPLv3-blue.svg)'
   } else {
-    return '' // If no license is selected, return an empty string for no badge
+    return ''
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'MIT') {
+    return 'https://opensource.org/licenses/MIT'
+  } else if (license === 'BSD') {
+    return 'https://opensource.org/licenses/BSD-3-Clause'
+  } else if (license === 'GPL') {
+    return 'https://www.gnu.org/licenses/gpl-3.0.en.html'
+  } else {
+    return ''
+  }
+}
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(data, license) {
   if (license === 'MIT'){
-    return `MIT License
-    
-    Copyright (c) ${data.userYear} ${data.username}
+    return `
+     Copyright (c) ${data.userYear} ${data.username}
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -44,8 +54,7 @@ function renderLicenseSection(data, license) {
     `
 
   } else if(license ==='BSD'){
-  return `BSD License
-    
+  return `
     Copyright (c) ${data.userYear} ${data.username}
 
     Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -59,8 +68,7 @@ function renderLicenseSection(data, license) {
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
 
   } else if (license === 'GPL'){
-   return `GPL License
-    
+   return `
     Copyright (c) ${data.userYear} ${data.username}
     
     Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
@@ -150,6 +158,8 @@ ${data.userQuestions}
 
 ## License
 
-${renderLicenseSection(data, data.userLicense)}
+${renderLicenseBadge(data.userLicense)} ${renderLicenseSection(data, data.userLicense)}
+
+For more information on this licence type visit ${renderLicenseLink(data.userLicense)}
 `;
 }
