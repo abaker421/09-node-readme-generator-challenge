@@ -35,7 +35,9 @@ ${userInstallation}
 
 ## Usage
 
-${userUsage}"
+${userUsage}
+
+${userRepository}
 
 ## Features
 
