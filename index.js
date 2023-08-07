@@ -17,6 +17,11 @@ inquirer
       name: 'userYear',
     },
     {
+        type: 'input',
+        message: 'What is the title of the project?'
+        name: 
+    }
+    {
       type: 'input',
       message: 'Give a brief Project Description',
       name: 'userProjectDescription',
@@ -56,10 +61,19 @@ inquirer
       type: 'input',
       message: 'What are the questions for this project?',
       name: 'userQuestions', 
+    },
+    {
+     type: 'choices',
+     message: 'What kind of license do you want to use?',
+     name: 'userLicenseType',
+     choices:['MIT', 'BSD', 'GPL', 'Other'],
+     default: 'MIT',
     }
 
 ])
-.then(() => {}
+.then(() => {
+    writeToFile(`${userProjectName}`, data)
+}
 
 
 )

@@ -23,7 +23,7 @@ export function generateMarkdown(data) {
 
 ## Project description
 
-${userProjectDescription}
+${data.userProjectDescription}
 
 ## Table of Contents
 
@@ -31,41 +31,41 @@ ${userProjectDescription}
 
 ## Installation
 
-${userInstallation}
+${data.userInstallation}
 
 ## Usage
 
-${userUsage}
+${data.userUsage}
 
-${userRepository}
+${data.userRepository}
 
 ## Features
 
-${userFeatures}
+${data.userFeatures}
 
 ## Documentation
 
-${userDocumentation}
+${data.userDocumentation}
 
 Screenshot:
 
-${userScreenshotLink}
+${data.userScreenshotLink}
 
 ## Contributing
 
-${userContributing}
+${data.userContributing}
 
 ## Tests
 
-${userTests}
+${data.userTests}
 
 ## Questions
 
-${userQuestions}
+${data.userQuestions}
 
 ## License
 
-${renderLicenseSection(license)}
+${data.renderLicenseSection(license)}
 
 
 
