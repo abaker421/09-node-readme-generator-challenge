@@ -1,10 +1,18 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer'
-import { generateMarkdown } from './utils/generateMarkdown'
+import generateMarkdown from './utils/generateMarkdown'
 const fs = require('fs')
 
-// TODO: Create an array of questions for user input
-inquirer
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+  const fileName= `README.md`
+  fs.writeFile('README.md', data)
+}
+
+// TODO: Create a function to initialize app
+function init() {
+    inquirer
   .prompt([
     {
       type: 'input',
@@ -18,9 +26,9 @@ inquirer
     },
     {
         type: 'input',
-        message: 'What is the title of the project?'
-        name: 
-    }
+        message: 'What is the title of the project?',
+        name: 'title'
+    },
     {
       type: 'input',
       message: 'Give a brief Project Description',
@@ -65,24 +73,18 @@ inquirer
     {
      type: 'choices',
      message: 'What kind of license do you want to use?',
-     name: 'userLicenseType',
-     choices:['MIT', 'BSD', 'GPL', 'Other'],
+     name: 'license',
+     choices:['MIT', 'BSD', 'GPL', 'None'],
      default: 'MIT',
     }
 
 ])
-.then(() => {
-    writeToFile(`${userProjectName}`, data)
+.then((answers) => {
+    const fileName = 'README.md'
+    const markdown= generateMarkdown(answers)
+    writeToFile(fileName, markdown)
+})
 }
-
-
-)
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
 
 // Function call to initialize app
 init();
