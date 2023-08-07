@@ -106,6 +106,10 @@ ${data.userInstallation}
 
 ${data.userUsage}
 
+Deployed Page:
+
+${data.deployedPageURL}
+
 Repository:
 
 ${data.userRepository}

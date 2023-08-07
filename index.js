@@ -52,6 +52,11 @@ function init() {
       name: 'userUsage',
     },
     {
+      type: 'input',
+      message: 'What is the URL of the deployed page?',
+      name: 'deployedPageURL'
+    },
+    {
       type:'input' ,
       message:'What is the repository URL?',
       name: 'userRepository',
