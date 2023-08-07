@@ -8,9 +8,9 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license === 'MIT'){
-    `MIT License
+function renderLicenseSection(data) {
+  if (data.userLicense === 'MIT'){
+    license= `MIT License
     
     Copyright (c) ${data.userYear} ${data.username}
 
@@ -33,8 +33,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
     `
 
-  } else if(data.license==='BSD'){
-    `BSD License
+  } else if(data.userLicense==='BSD'){
+  `BSD License
     
     Copyright (c) ${data.userYear} ${data.username}
     
@@ -50,8 +50,8 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
 
-  } else if (data.license === 'GPL'){
-    `GPL License
+  } else if (data.userLicense === 'GPL'){
+   `GPL License
     
     Copyright (c) ${data.userYear} ${data.username}
     
@@ -74,8 +74,7 @@ For the developers' and authors' protection, the GPL clearly explains that there
 
 Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so. This is fundamentally incompatible with the aim of protecting users' freedom to change the software. The systematic pattern of such abuse occurs in the area of products for individuals to use, which is precisely where it is most unacceptable. Therefore, we have designed this version of the GPL to prohibit the practice for those products. If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users.
 
-Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.
-    `
+Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.`
 
   } else {
     console.log(`No license has been selected, manually add later`)
@@ -83,7 +82,7 @@ Finally, every program is threatened constantly by software patents. States shou
 }
 
 // TODO: Create a function to generate markdown for README
-export function generateMarkdown(data) {
+export function generateMarkdown(data, license) {
   return `# ${data.title}
   # 
 
@@ -131,13 +130,6 @@ ${data.userQuestions}
 
 ## License
 
-${data.renderLicenseSection(data.license)}
-
-
-
+${renderLicenseSection(data.userLicense)}
 `;
 }
-
-module.exports= generateMarkdown
-
-

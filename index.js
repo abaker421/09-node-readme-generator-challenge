@@ -1,13 +1,19 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer'
-import generateMarkdown from './utils/generateMarkdown'
-const fs = require('fs')
+import {generateMarkdown} from  './utils/generateMarkdown.js'
+import fs from 'fs'
+const fileName= 'README.md'
 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  const fileName= `README.md`
-  fs.writeFile('README.md', data)
+  fs.writeFile(fileName, data, (err)=>{
+    if (err){
+      console.log(err)
+    } else {
+      console.log('Generated successfully!')
+    }
+  })
 }
 
 // TODO: Create a function to initialize app
@@ -73,16 +79,20 @@ function init() {
     {
      type: 'choices',
      message: 'What kind of license do you want to use?',
-     name: 'license',
+     name: 'userLicense',
      choices:['MIT', 'BSD', 'GPL', 'None'],
      default: 'MIT',
     }
 
 ])
 .then((answers) => {
-    const fileName = 'README.md'
-    const markdown= generateMarkdown(answers)
+    const markdown= generateMarkdown(answers, answers.userLicense)
+    
     writeToFile(fileName, markdown)
+})
+
+.catch((err)=>{
+  console.log(err)
 })
 }
 
