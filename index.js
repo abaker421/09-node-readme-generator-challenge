@@ -42,6 +42,11 @@ function init() {
       name: 'userProjectDescription',
     },
     {
+      type: 'input',
+      message: 'What are the installation instructions?',
+      name: 'userInstallation'
+    },
+    {
       type:'input' ,
       message:'What are the Usage instructions?',
       name: 'userUsage',
@@ -66,6 +71,11 @@ function init() {
       message:'What is the image link for the screenshot?',
       name: 'userScreenshotLink',
       default: '![placeholder](https://github.com/bakeradm6/09-node-readme-generator-challenge/assets/123577761/7340e073-8263-45b3-99da-613d6f95d561)',
+    },
+    {
+      type:'input',
+      message:"Who contributed to this project?",
+      name: 'userContributing',
     },
     {
       type: 'input',
