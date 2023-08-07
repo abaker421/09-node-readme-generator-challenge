@@ -4,14 +4,65 @@ import { generateMarkdown } from './utils/generateMarkdown'
 const fs = require('fs')
 
 // TODO: Create an array of questions for user input
-inquirer.prompt([
+inquirer
+  .prompt([
     {
-        type:'' ,
-        message:'' ,
-        name:'' ,
+      type: 'input',
+      message: 'What is your name?',
+      name: 'username',
+    },
+    {
+      type: 'number',
+      message: 'What year is it?',
+      name: 'userYear',
+    },
+    {
+      type: 'input',
+      message: 'Give a brief Project Description',
+      name: 'userProjectDescription',
+    },
+    {
+      type:'input' ,
+      message:'What are the Usage instructions?',
+      name: 'userUsage',
+    },
+    {
+      type:'input' ,
+      message:'What is the repository URL?',
+      name: 'userRepository',
+    },
+    {
+      type:'input' ,
+      message:'What are the features of the project?',
+      name: 'userFeatures',
+    },
+    {
+      type:'input' ,
+      message:'What are the links to any relevant documentation? Screenshot will be asked for separatley',
+      name: 'userDocumentation',
+    },
+    {
+      type:'input' ,
+      message:'What is the ![image] for the screenshot?',
+      name: 'userDocumentation',
+      default: '![placeholder](https://github.com/bakeradm6/09-node-readme-generator-challenge/assets/123577761/7340e073-8263-45b3-99da-613d6f95d561)',
+    },
+    {
+      type: 'input',
+      message: 'What are the tests for this project?',
+      name: 'userTests',
+    },
+    {
+      type: 'input',
+      message: 'What are the questions for this project?',
+      name: 'userQuestions', 
     }
 
 ])
+.then(() => {}
+
+
+)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
