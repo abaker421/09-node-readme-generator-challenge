@@ -93,7 +93,7 @@ function renderLicenseSection(data, license) {
     Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.`
 
   } else {
-    return `No License Selected`
+    return ``
   }
 }
 
@@ -161,5 +161,5 @@ ${data.userQuestions}
 ${renderLicenseBadge(data.userLicense)} ${renderLicenseSection(data, data.userLicense)}
 
 For more information on this licence type visit ${renderLicenseLink(data.userLicense)}
-`;
+`
 }
