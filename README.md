@@ -25,7 +25,7 @@ Run npm init upon first download to install inquirer
 -Open the program folder in a termial<br>
 -Type node index<br>
 -Answer the prompts<br>
--The README is generated in the program folder
+-The README is generated in the same folder as the root index.js 
 
 
 Repository: 
